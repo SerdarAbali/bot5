@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>urdf_bot5_description</name>
+  <name>bot5_description</name>
   <version>0.0.0</version>
-<description>The urdf_bot5_description package</description>
+<description>The bot5_description package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
