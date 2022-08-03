@@ -1,9 +1,0 @@
-<launch>
-
-<rosparam file="$(find urdf_bot5_description)/launch/controller.yaml" command="load"/>
-<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="urdf_bot5" args="Rev1_position_controller Rev2_position_controller Rev3_position_controller Rev4_position_controller Rev5_position_controller Rev6_position_controller joint_state_controller "/>
-<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
-  <remap from="/joint_states" to="/urdf_bot5/joint_states"/>
-</node>
-
-</launch>
