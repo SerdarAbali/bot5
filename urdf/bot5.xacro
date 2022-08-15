@@ -4,8 +4,6 @@
 <xacro:include filename="$(find bot5_description)/urdf/materials.xacro" />
 <xacro:include filename="$(find bot5_description)/urdf/bot5.trans" />
 <xacro:include filename="$(find bot5_description)/urdf/bot5.gazebo" />
-  
-<link name="dummy"/>  
 <link name="base_link">
   <inertial>
     <origin xyz="-0.1758856312258705 -0.0002108801413928246 0.15999684267558398" rpy="0 0 0"/>
@@ -26,13 +24,8 @@
     </geometry>
   </collision>
 </link>
-  
-<joint name="dummy_joint" type="fixed">
- <parent link="dummy"/>
- <child link="base_footprint"/>
-</joint>
 
-<link name="left_wheel">
+<link name="left_wheel_1">
   <inertial>
     <origin xyz="0.20004860168806374 0.03873115898033333 -4.449218771185315e-14" rpy="0 0 0"/>
     <mass value="2.1920210431083533"/>
@@ -53,7 +46,7 @@
   </collision>
 </link>
 
-<link name="right_wheel">
+<link name="right_wheel_1">
   <inertial>
     <origin xyz="0.20004860168807084 -0.03873122504117252 -4.4103609653234344e-14" rpy="0 0 0"/>
     <mass value="2.1920210431083507"/>
@@ -200,17 +193,17 @@
   </collision>
 </link>
 
-<joint name="left_wheel" type="continuous">
+<joint name="Rev2" type="continuous">
   <origin xyz="-0.205931 0.149879 0.125" rpy="0 0 0"/>
   <parent link="base_link"/>
-  <child link="left_wheel"/>
+  <child link="left_wheel_1"/>
   <axis xyz="-0.0 1.0 -0.0"/>
 </joint>
 
-<joint name="right_wheel" type="continuous">
+<joint name="Rev3" type="continuous">
   <origin xyz="-0.205931 -0.150121 0.125" rpy="0 0 0"/>
   <parent link="base_link"/>
-  <child link="right_wheel"/>
+  <child link="right_wheel_1"/>
   <axis xyz="-0.0 1.0 -0.0"/>
 </joint>
 
