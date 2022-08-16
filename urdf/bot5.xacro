@@ -25,7 +25,7 @@
   </collision>
 </link>
 
-<link name="left_wheel_1">
+<link name="left_wheel">
   <inertial>
     <origin xyz="4.860168806373845e-05 0.03933115898033335 -4.4422798772814076e-14" rpy="0 0 0"/>
     <mass value="2.1920210431083516"/>
@@ -46,7 +46,7 @@
   </collision>
 </link>
 
-<link name="right_wheel_1">
+<link name="right_wheel">
   <inertial>
     <origin xyz="4.860168807075394e-05 -0.039331225041172535 -4.4075854077618715e-14" rpy="0 0 0"/>
     <mass value="2.19202104310835"/>
@@ -151,7 +151,7 @@
   </collision>
 </link>
 
-<link name="realsense_1">
+<link name="realsense">
   <inertial>
     <origin xyz="0.006048313146213111 0.0011644524543970541 0.012437796956994596" rpy="0 0 0"/>
     <mass value="0.09533442052024729"/>
@@ -172,7 +172,7 @@
   </collision>
 </link>
 
-<link name="imu_1">
+<link name="imu">
   <inertial>
     <origin xyz="1.9553994023285837e-07 -3.303041936634414e-08 0.001000001415556534" rpy="0 0 0"/>
     <mass value="1.5700000467896408e-05"/>
@@ -193,7 +193,7 @@
   </collision>
 </link>
 
-<link name="lidar_1">
+<link name="lidar">
   <inertial>
     <origin xyz="0.0001091440734231734 -1.1037922009016115e-05 0.01727958500461163" rpy="0 0 0"/>
     <mass value="0.3162775249943877"/>
@@ -217,14 +217,14 @@
 <joint name="left_wheel" type="continuous">
   <origin xyz="6.9e-05 0.149879 0.125" rpy="0 0 0"/>
   <parent link="base_link"/>
-  <child link="left_wheel_1"/>
+  <child link="left_wheel"/>
   <axis xyz="-0.0 1.0 -0.0"/>
 </joint>
 
 <joint name="right_wheel" type="continuous">
   <origin xyz="6.9e-05 -0.150121 0.125" rpy="0 0 0"/>
   <parent link="base_link"/>
-  <child link="right_wheel_1"/>
+  <child link="right_wheel"/>
   <axis xyz="-0.0 1.0 -0.0"/>
 </joint>
 
@@ -259,19 +259,19 @@
 <joint name="realsense" type="fixed">
   <origin xyz="0.034069 -0.000121 0.223" rpy="0 0 0"/>
   <parent link="base_link"/>
-  <child link="realsense_1"/>
+  <child link="realsense"/>
 </joint>
 
-<joint name="Rigid8" type="fixed">
+<joint name="imu" type="fixed">
   <origin xyz="0.041069 -0.000121 0.223" rpy="0 0 0"/>
   <parent link="base_link"/>
-  <child link="imu_1"/>
+  <child link="imu"/>
 </joint>
 
-<joint name="Rigid9" type="fixed">
+<joint name="lidar" type="fixed">
   <origin xyz="0.001191 -0.000121 0.277" rpy="0 0 0"/>
   <parent link="base_link"/>
-  <child link="lidar_1"/>
+  <child link="lidar"/>
 </joint>
 
 </robot>
