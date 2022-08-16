@@ -1,0 +1,9 @@
+<launch>
+
+<rosparam file="$(find bot5_description)/launch/controller.yaml" command="load"/>
+<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="bot5" args="left_wheel_position_controller right_wheel_position_controller left_caster_wheel_position_controller right_caster_wheel_position_controller left_caster_body_position_controller right_caster_body_position_controller joint_state_controller "/>
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+  <remap from="/joint_states" to="/bot5/joint_states"/>
+</node>
+
+</launch>
