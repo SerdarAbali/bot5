@@ -1,0 +1,41 @@
+<launch>
+
+  <!-- Lidar https://github.com/ldrobotSensorTeam/ldlidar_stl_ros -->
+  <include file="$(find ldlidar_stl_ros)/launch/ld19.launch" />
+
+
+ 
+  <arg name="model" default="$(find bot5)/urdf/bot5.xacro"/>
+  <arg name="gui" default="false"/>
+  <arg name="rvizconfig" default="$(find bot5)/launch/urdf.rviz"/>
+  <param name="robot_description" command="$(find xacro)/xacro $(arg model)"/>
+  <param name="use_gui" value="$(arg gui)"/>
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+
+  <node pkg="twist_mux" type="twist_mux" name="twist_mux">
+    <rosparam command="load" file="$(find bot5)/conf/twist_mux.yaml" />
+    <remap from="cmd_vel_out" to="hoverboard_velocity_controller/cmd_vel"/> 
+  </node>
+
+
+  <!-- HB driver -->
+  <include file="$(find hoverboard_driver)/launch/hoverboard.launch" />
+
+  <node pkg="gmapping" type="slam_gmapping" name="gmapping">
+    <param name="base_frame" value="base_link" /> 
+    <param name="odom_frame" value="raw_odom" />
+    <param name="delta" value="0.1" />
+  </node>
+  
+  <node pkg="move_base" type="move_base" name="Base_move" output="screen">
+    <param name="controller_frequency" value="10.0" />
+    <rosparam file="$(find bot5)/config/costmap_common_params.yaml" command="load" ns="global_costmap"/>
+    <rosparam file="$(find bot5)/config/costmap_common_params.yaml" command="load" ns="local_costmap"/>
+    <rosparam file="$(find bot5)/config/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find bot5)/config/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find bot5)/config/trajectory_planner.yaml" command="load" />
+  </node>
+
+</launch>
