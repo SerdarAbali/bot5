@@ -13,7 +13,6 @@
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
 
-
   <node pkg="twist_mux" type="twist_mux" name="twist_mux">
     <rosparam command="load" file="$(find bot5)/conf/twist_mux.yaml" />
     <remap from="cmd_vel_out" to="hoverboard_velocity_controller/cmd_vel"/> 
@@ -29,13 +28,15 @@
     <param name="delta" value="0.1" />
   </node>
   
-  <node pkg="move_base" type="move_base" name="Base_move" output="screen">
-    <param name="controller_frequency" value="10.0" />
-    <rosparam file="$(find bot5)/config/costmap_common_params.yaml" command="load" ns="global_costmap"/>
-    <rosparam file="$(find bot5)/config/costmap_common_params.yaml" command="load" ns="local_costmap"/>
-    <rosparam file="$(find bot5)/config/local_costmap_params.yaml" command="load" />
-    <rosparam file="$(find bot5)/config/global_costmap_params.yaml" command="load" />
-    <rosparam file="$(find bot5)/config/trajectory_planner.yaml" command="load" />
+  <node pkg="move_base" type="move_base" name="move_base" output="screen">
+        <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />
+        <param name="base_global_planner" value="global_planner/GlobalPlanner" />
+        <rosparam file="$(find bot5)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+        <rosparam file="$(find bot5)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+        <rosparam file="$(find bot5)/config/local_costmap_params.yaml" command="load" />
+        <rosparam file="$(find bot5)/config/global_costmap_params.yaml" command="load" />
+        <rosparam file="$(find bot5)/config/teb_local_planner_params.yaml" command="load" />
+    
   </node>
 
 </launch>

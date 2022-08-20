@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 <robot name="bot5" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<xacro:include filename="$(find bot5_description)/urdf/materials.xacro" />
-<xacro:include filename="$(find bot5_description)/urdf/bot5.trans" />
-<xacro:include filename="$(find bot5_description)/urdf/bot5.gazebo" />
+<xacro:include filename="$(find bot5)/urdf/materials.xacro" />
+<xacro:include filename="$(find bot5)/urdf/bot5.trans" />
+<xacro:include filename="$(find bot5)/urdf/bot5.gazebo" />
 <link name="base_link">
   <inertial>
     <origin xyz="-0.16988563122587064 -0.00021088014139281883 0.15999684267558392" rpy="0 0 0"/>
@@ -13,14 +13,14 @@
   <visual>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://bot5_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://bot5/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://bot5_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://bot5/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -34,14 +34,14 @@
   <visual>
     <origin xyz="-6.9e-05 -0.149879 -0.125" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://bot5_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://bot5/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-6.9e-05 -0.149879 -0.125" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://bot5_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://bot5/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -55,14 +55,14 @@
   <visual>
     <origin xyz="-6.9e-05 0.150121 -0.125" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://bot5_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://bot5/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-6.9e-05 0.150121 -0.125" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://bot5_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://bot5/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -76,14 +76,14 @@
   <visual>
     <origin xyz="0.40775 -0.090375 -0.049995" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://bot5_description/meshes/caster_wheel_left_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://bot5/meshes/caster_wheel_left_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.40775 -0.090375 -0.049995" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://bot5_description/meshes/caster_wheel_left_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://bot5/meshes/caster_wheel_left_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -97,14 +97,14 @@
   <visual>
     <origin xyz="0.40775 0.105875 -0.049995" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://bot5_description/meshes/caster_wheel_right_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://bot5/meshes/caster_wheel_right_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.40775 0.105875 -0.049995" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://bot5_description/meshes/caster_wheel_right_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://bot5/meshes/caster_wheel_right_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -118,14 +118,14 @@
   <visual>
     <origin xyz="0.372931 -0.099879 -0.127652" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://bot5_description/meshes/caster_body_left_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://bot5/meshes/caster_body_left_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.372931 -0.099879 -0.127652" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://bot5_description/meshes/caster_body_left_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://bot5/meshes/caster_body_left_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -139,19 +139,19 @@
   <visual>
     <origin xyz="0.372931 0.100121 -0.127652" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://bot5_description/meshes/caster_body_right_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://bot5/meshes/caster_body_right_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.372931 0.100121 -0.127652" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://bot5_description/meshes/caster_body_right_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://bot5/meshes/caster_body_right_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
-<link name="realsense">
+<link name="camera_link">
   <inertial>
     <origin xyz="0.006048313146213111 0.0011644524543970541 0.012437796956994596" rpy="0 0 0"/>
     <mass value="0.09533442052024729"/>
@@ -160,14 +160,14 @@
   <visual>
     <origin xyz="-0.034069 0.000121 -0.223" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://bot5_description/meshes/realsense_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://bot5/meshes/realsense_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.034069 0.000121 -0.223" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://bot5_description/meshes/realsense_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://bot5/meshes/realsense_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -181,14 +181,14 @@
   <visual>
     <origin xyz="-0.041069 0.000121 -0.223" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://bot5_description/meshes/imu_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://bot5/meshes/imu_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.041069 0.000121 -0.223" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://bot5_description/meshes/imu_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://bot5/meshes/imu_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -202,14 +202,14 @@
   <visual>
     <origin xyz="-0.001191 0.000121 -0.277" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://bot5_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://bot5/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.001191 0.000121 -0.277" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://bot5_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://bot5/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -256,10 +256,10 @@
   <axis xyz="0.0 0.0 1.0"/>
 </joint>
 
-<joint name="realsense" type="fixed">
+<joint name="camera_joint" type="fixed">
   <origin xyz="0.034069 -0.000121 0.223" rpy="0 0 0"/>
   <parent link="base_link"/>
-  <child link="realsense"/>
+  <child link="camera_link"/>
 </joint>
 
 <joint name="imu" type="fixed">
