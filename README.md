@@ -5,7 +5,7 @@
 You can either buy an old used hoverboard or order the following:
 
 Method 1
-Buy a hoverboard, particular model would be "Orb Wheel X8"
+Buy a hoverboard, the most compatible model would be "Orb Wheel X8"
 
 Method 2
 Buy seperate parts:
