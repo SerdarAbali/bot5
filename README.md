@@ -21,6 +21,7 @@ https://www.ubiquityrobotics.com/downloads-raspberry-pi/
 https://www.banggood.com/3pcs-ST-LINK-V2-Programmer-Emulator-Mini-STLINK-Downloader-for-STM8-or-STM32-MCU-Development-Board-p-1684588.html?imageAb=1&akmClientCountry=FI&cur_warehouse=CN
 
 Now, assuming that you have the hardware ready, please follow the steps below:
+
 1- Hoverboard motor controller FOC hack, please be careful with this controller, it tends to fry itself very easy. Avoid any unnecessary metal contact, liquids and such. It easily shorts and bricks.
 
 Please refer to this video for FOC hack (Attention, Llyod flashes the controller while the controller is plugged to battery. Do not plug it to battery during any procedure explained in the video)
