@@ -13,7 +13,7 @@ Buy seperate parts:
 
  https://www.aliexpress.com/item/10000057151391.html
  
-- 10" Hoverboard hubwheels with hall sensors:
+- If you are going to 3d-print Bot5 => 10" Hoverboard hubwheels with hall sensors:
 
  https://www.aliexpress.com/item/32850640454.html
 
