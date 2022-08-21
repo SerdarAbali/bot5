@@ -17,7 +17,7 @@ Buy seperate parts:
  https://www.aliexpress.com/item/32809906886.html
 - A mini PC such as Intel Nuc or Raspberry Pi 4 with ROS Noetic. For Raspberry Pi 4 you can download Ubiquity Robotics image from here:
 https://www.ubiquityrobotics.com/downloads-raspberry-pi/
-- ST-Link V2 or a replika:
+- ST-Link V2 or a replica:
 https://www.banggood.com/3pcs-ST-LINK-V2-Programmer-Emulator-Mini-STLINK-Downloader-for-STM8-or-STM32-MCU-Development-Board-p-1684588.html?imageAb=1&akmClientCountry=FI&cur_warehouse=CN
 
 Now, assuming that you have the hardware ready, please follow the steps below:
